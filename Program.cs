@@ -34,7 +34,7 @@ namespace Dev_Test_Nov_2021
 
             /*Low stocks*/            
             List<Product> losStocks = lowStock(products);
-            Console.WriteLine("Ids los stocs");
+            Console.WriteLine("\nIds los stocs");
             foreach (Product item in losStocks)
             {                
                 Console.WriteLine(item.Id);
@@ -45,7 +45,7 @@ namespace Dev_Test_Nov_2021
             Console.WriteLine("Avg Price: $"+aveStocks);
 
             /*Update stock (B091NE9K4)*/
-            Console.WriteLine("Updated list");
+            Console.WriteLine("\nUpdated list");
             foreach (Product item in products) 
             {
                 if (item.Id == "B091NE9K4 ") { item.Price = item.Price * 1.3; }
@@ -70,11 +70,11 @@ namespace Dev_Test_Nov_2021
 
             List<Order> sortList = newList.OrderBy(x => x.Price).ToList();
             /*Display the sorted list*/
-            Console.WriteLine("{0} {1} {2}", "OrderId", "Value", "Customer");
+            Console.WriteLine("\n{0,-10} {1} {2}", "OrderId", "Value", "Customer");
             foreach (Order item in sortList)
             {
 
-                Console.WriteLine("{0} {1:C} {2}", item.Id, item.Price, item.Customer);
+                Console.WriteLine("{0,-10} {1:C} {2}", item.Id, item.Price, item.Customer);
 
             }
             Console.ReadLine();
